@@ -10,12 +10,15 @@ Installation Steps
 2) Login to your Webhost's FTP. If you're using cPanel login and navigate to the File Manager.
 3) Open this file under your WHMCS Installation. /home/(yourcpanelusername)/(yourwhmcsdomain)/templates/(yourcurrentwhmcstemplete)/header.tpl
 4) On **Line 17 Under {$headeroutput}** paste the following code in written below.
-5) Next time a user logs in or appears. Your system will be tracking their information!
+5) On **Line 23 Update** the section **s.src='https://widget.intercom.io/widget/########';var** with your intercom app id.
+6) Next time a user logs in or appears. Your system will be tracking their information!
 
->{php}require('chat.php');{/php}
+>{php}
+>require('chat.php');
+>{/php}
   ><script>
   >{literal}
-  >(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/mt7vhvz6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+  >(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/########';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
 >{/literal}
   ></script>
   
