@@ -7,7 +7,8 @@ Installation Steps
 1) Download the Intercom.php File.
 2) Login to your cPanel FTP.
 3) Open this file under your WHMCS Installation. /home/(yourcpanelusername)/(yourwhmcsdomain)/templates/(yourcurrentwhmcstemplete)/header.tpl
-4) On Line 17 Under {headerinput} paste the following code in.
+4) On **Line 17 Under {$headeroutput}** paste the following code in.
+
 >{php}require('chat.php');{/php}
   ><script>
   >{literal}
