@@ -3,6 +3,19 @@ Intercom Integration Script to WHMCS (Unofficial)
 ###### This script allows WHMCS users to connect their whmcs installation to Intercom seamlessly! Once installed, all customer data, information, and IP will be synchronized between Intercom & WHMCS. To also prevent spam/abuse, this script also tracks leads IP information. Additionally, there is a simple installation as well!
 
 ###### Notice: This code does not have any exploits nor does it share your information with anyone. Feel free to check the code out as it has no abusive features what so ever. The only job it does is connects to your whmcs database to sync data.
+
+###### System Tracks:
+Client Full Name
+Client Email
+Client Phone Number
+Client IP Address
+Client Phone Number
+Client Status
+Client Email Status
+Client City/State/Country
+Client Language
+Client Credit Balance
+& More!
 ---
 Installation Steps
 
@@ -14,7 +27,7 @@ Installation Steps
 6) Next time a user logs in or appears. Your system will be tracking their information!
 
 >{php}
->require('chat.php');
+>require('intercom.php');
 >{/php}
   ><script>
   >{literal}
